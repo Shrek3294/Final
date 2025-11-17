@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f0ea;
+}
+
+.hero-video {
+  width: 100%;
+  display: grid;
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+}
+
+header {
+  background-color: #262626;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 1rem;
+}
+
+nav a {
+  color: #ffdd55;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto 3rem auto;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 4px;
+  display: grid;
+  gap: 0.75rem;
+}
+
+section h2 {
+  margin: 0;
+  color: #b23a2c;
+}
