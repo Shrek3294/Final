@@ -4,12 +4,7 @@ body {
   background-color: #f5f0ea;
 }
 
-.hero-video {
-  width: 100%;
-  display: grid;
-}
-
-.hero-video video {
+video {
   width: 100%;
   height: auto;
   max-height: 60vh;
@@ -62,4 +57,34 @@ section {
 section h2 {
   margin: 0;
   color: #b23a2c;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-controls button[data-filter] {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.about-layout img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
 }

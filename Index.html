@@ -57,7 +57,78 @@
         Ready to see what we are serving today? Check out our full <a href="menu.html">menu</a> or get in touch
         through our <a href="contact.html">contact</a> page.
       </p>
+      <button type="button" onclick="checkReservation()">Should I Get a Reservation?</button>
+    </section>
+
+    <section>
+      <h2>Rate Your Experience</h2>
+      <p>How many stars would you give Barrio Tacos &amp; Cantina?</p>
+      <div id="rating-stars">
+        <button type="button" data-rating="1">&#9733;</button> <!-- &#9733 is the HTML entity for a star symbol -->
+        <button type="button" data-rating="2">&#9733;&#9733;</button>
+        <button type="button" data-rating="3">&#9733;&#9733;&#9733;</button>
+        <button type="button" data-rating="4">&#9733;&#9733;&#9733;&#9733;</button>
+        <button type="button" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</button>
+      </div>
+      <p id="rating-message"></p>
     </section>
   </main>
+
+  <script>
+    function showHoursLocationPopup() {
+      const message = "Welcome to Barrio Tacos & Cantina!\n\nDid you know we have $8 Taco Tuesdays?";
+      confirm(message);
+    }
+
+    function setupCustomerRatingStars() {
+      const ratingContainer = document.getElementById("rating-stars");
+      const ratingMessage = document.getElementById("rating-message");
+      if (!ratingContainer || !ratingMessage) return;
+
+      ratingContainer.addEventListener("click", function (event) {
+        const button = event.target.closest("button[data-rating]");
+        if (!button) return;
+
+        const rating = button.getAttribute("data-rating");
+        ratingMessage.textContent = "Thank you for rating us " + rating + " out of 5 stars!";
+      });
+    }
+
+    window.addEventListener("load", function () {
+      showHoursLocationPopup();
+      setupCustomerRatingStars();
+    });
+
+    function checkReservation() {
+      var day = prompt("What day are you planning to come? (e.g., Monday, Friday)");
+      if (!day) {
+        return;
+      }
+
+      var time = prompt("About what time? (24-hour, e.g., 18 for 6 PM)");
+      if (!time) {
+        return;
+      }
+
+      var hour = parseInt(time, 10);
+      var busy = false;
+
+      day = day.toLowerCase();
+
+      if (day === "friday" || day === "saturday") {
+        if (hour >= 17 && hour <= 21) {
+          busy = true;
+        }
+      } else if (hour >= 18 && hour <= 20) {
+        busy = true;
+      }
+
+      if (busy) {
+        alert("It usually gets busy then. We recommend making a reservation.");
+      } else {
+        alert("You should be fine walking in, but reservations are always welcome.");
+      }
+    }
+  </script>
 </body>
 </html>

@@ -16,8 +16,16 @@
     </nav>
   </header>
 
-  <h2>Mains - Tacos</h2>
-  <ul>
+  <section class="filter-controls">
+    <h2>Filter Menu</h2>
+    <button type="button" data-filter="tacos">Show Tacos</button>
+    <button type="button" data-filter="burritos">Show Burritos</button>
+    <button type="button" data-filter="drinks">Show Drinks</button>
+  </section>
+
+  <div class="menu-category" data-category="tacos">
+    <h2>Mains - Tacos</h2>
+    <ul>
       <li>
           <strong>Birria Tacos</strong><br>
           Slow-braised beef folded into griddled corn tortillas, melted cheese, onions, cilantro, and served with a rich consomme for dipping.
@@ -50,10 +58,55 @@
           <strong>Breakfast Tacos</strong><br>
           Fluffy scrambled eggs, cheese, crispy potatoes, and your choice of bacon, chorizo, or veggies.
       </li>
-  </ul>
+    </ul>
 
-  <h2>Plates &amp; Specials</h2>
-  <ul>
+    <section>
+    <h2>Build Your Own Tacos</h2>
+    <p>Pick your protein, toppings, and extras to see your taco price.</p>
+
+    <form id="taco-form">
+      <fieldset>
+        <legend>Choose Your Protein (includes 2 toppings)</legend>
+        <label><input type="radio" name="protein" value="birria" checked> Birria Tacos</label><br>
+        <label><input type="radio" name="protein" value="bajaFish"> Baja Crispy Fish</label><br>
+        <label><input type="radio" name="protein" value="carneAsada"> Carne Asada</label><br>
+        <label><input type="radio" name="protein" value="alPastor"> Al Pastor</label><br>
+        <label><input type="radio" name="protein" value="chickenTinga"> Chicken Tinga</label><br>
+        <label><input type="radio" name="protein" value="mushroomAsada"> Mushroom Asada (Vegan)</label><br>
+        <label><input type="radio" name="protein" value="barbacoa"> Barbacoa</label><br>
+        <label><input type="radio" name="protein" value="breakfast"> Breakfast Tacos</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose Your Toppings</legend>
+        <label><input type="checkbox" name="topping" value="cheese"> Cheese</label><br>
+        <label><input type="checkbox" name="topping" value="pico"> Pico de Gallo</label><br>
+        <label><input type="checkbox" name="topping" value="slaw"> Cilantro-Lime Slaw</label><br>
+        <label><input type="checkbox" name="topping" value="crema"> Baja / Chipotle Crema</label><br>
+        <label><input type="checkbox" name="topping" value="avocado"> Avocado / Guacamole</label><br>
+        <label><input type="checkbox" name="topping" value="pineapple"> Grilled Pineapple</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Extras</legend>
+        <label>
+          <input type="checkbox" id="extra-meat">
+          Extra meat (adds $2.00)
+        </label><br>
+        <label>
+          Quantity:
+          <input type="number" id="quantity" min="1" value="1">
+        </label>
+      </fieldset>
+
+      <button type="button" id="calculate-btn">Calculate Price</button>
+    </form>
+
+    <p id="taco-total">Total: $0.00</p>
+    </section>
+
+    <h2>Plates &amp; Specials</h2>
+    <ul>
       <li>
           <strong>Taco Plate</strong><br>
           Choose any 3 tacos, served with rice and beans.
@@ -70,10 +123,10 @@
           <strong>Veggie Bowl (Vegan)</strong><br>
           Mushroom asada, charred peppers, corn, black beans, and avocado salsa over rice.
       </li>
-  </ul>
+    </ul>
 
-  <h2>Sides</h2>
-  <ul>
+    <h2>Sides</h2>
+    <ul>
       <li>
           <strong>Esquites</strong><br>
           Mexican street corn in a cup with mayo, queso fresco, lime, and chile seasoning.
@@ -98,10 +151,10 @@
           <strong>Rice &amp; Beans</strong><br>
           Mexican red rice and slow-cooked black beans.
       </li>
-  </ul>
+    </ul>
 
-  <h2>Desserts</h2>
-  <ul>
+    <h2>Desserts</h2>
+    <ul>
       <li>
           <strong>Churros</strong><br>
           Crispy cinnamon-sugar churros served with chocolate or caramel dipping sauce.
@@ -118,39 +171,146 @@
           <strong>Flan</strong><br>
           Traditional caramel custard with vanilla.
       </li>
-  </ul>
+    </ul>
+  </div>
 
-  <h2>Drinks</h2>
+  <div class="menu-category" data-category="burritos">
+    <h2>Burritos</h2>
+    <ul>
+      <li>
+        <strong>Carne Asada Burrito</strong><br>
+        Grilled steak, rice, beans, cheese, pico de gallo, and salsa roja wrapped in a warm flour tortilla.
+      </li>
+      <li>
+        <strong>Veggie Burrito</strong><br>
+        Mushroom asada, black beans, rice, peppers, corn, and avocado salsa in a flour tortilla.
+      </li>
+    </ul>
+  </div>
 
-  <h3>Agua Frescas</h3>
-  <ul>
-      <li>Horchata</li>
-      <li>Jamaica (hibiscus)</li>
-      <li>Mango</li>
-      <li>Watermelon</li>
-  </ul>
+  <div class="menu-category" data-category="drinks">
+    <h2>Drinks</h2>
 
-  <h3>Soft Drinks</h3>
-  <ul>
-      <li>Coke</li>
-      <li>Diet Coke</li>
-      <li>Sprite</li>
-      <li>Jarritos (variety of flavors)</li>
-      <li>Bottled water</li>
-  </ul>
+    <h3>Agua Frescas</h3>
+    <ul>
+        <li>Horchata</li>
+        <li>Jamaica (hibiscus)</li>
+        <li>Mango</li>
+        <li>Watermelon</li>
+    </ul>
 
-  <h3>Other Drinks</h3>
-  <ul>
-      <li>Lemonades</li>
-      <li>Iced Tea</li>
-  </ul>
+    <h3>Soft Drinks</h3>
+    <ul>
+        <li>Coke</li>
+        <li>Diet Coke</li>
+        <li>Sprite</li>
+        <li>Jarritos (variety of flavors)</li>
+        <li>Bottled water</li>
+    </ul>
 
-  <h3>Margaritas &amp; Cantina Drinks</h3>
-  <ul>
-      <li>Classic Lime Margarita</li>
-      <li>Spicy Mango Margarita</li>
-      <li>Mezcal Paloma</li>
-      <li>Michelada</li>
-  </ul>
+    <h3>Other Drinks</h3>
+    <ul>
+        <li>Lemonades</li>
+        <li>Iced Tea</li>
+    </ul>
+
+    <h3>Margaritas &amp; Cantina Drinks</h3>
+    <ul>
+        <li>Classic Lime Margarita</li>
+        <li>Spicy Mango Margarita</li>
+        <li>Mezcal Paloma</li>
+        <li>Michelada</li>
+    </ul>
+  </div>
+
+  <script>
+    // Object for base prices per protein
+    const proteinPrices = {
+      birria: 4.5,
+      bajaFish: 4.25,
+      carneAsada: 4.75,
+      alPastor: 4.25,
+      chickenTinga: 4.0,
+      mushroomAsada: 4.0,
+      barbacoa: 4.75,
+      breakfast: 4.25
+    };
+
+    // Object for topping prices (first 2 are free, extras cost)
+    const toppingPrices = {
+      cheese: 0.5,
+      pico: 0.5,
+      slaw: 0.5,
+      crema: 0.5,
+      avocado: 1.0,
+      pineapple: 0.75
+    };
+
+    const extraMeatPrice = 2.0;
+
+    function calculateTacoPrice() {
+      const form = document.getElementById("taco-form");
+
+      // Get selected protein
+      const protein = form.elements["protein"].value;
+      let basePrice = proteinPrices[protein] || 0;
+
+      // Get selected toppings (loop through checkboxes)
+      const toppingCheckboxes = form.querySelectorAll('input[name="topping"]:checked');
+      let toppingsCost = 0;
+      let toppingCount = 0;
+
+      toppingCheckboxes.forEach(function (checkbox) {
+        const toppingName = checkbox.value;
+        toppingCount++;
+
+        // First 2 toppings are free; extras cost based on object
+        if (toppingCount > 2) {
+          toppingsCost += toppingPrices[toppingName] || 0;
+        }
+      });
+
+      // Conditional: extra meat costs more
+      let extraCost = 0;
+      const extraMeatChecked = document.getElementById("extra-meat").checked;
+      if (extraMeatChecked) {
+        extraCost += extraMeatPrice;
+      }
+
+      // Quantity
+      const quantityInput = document.getElementById("quantity");
+      const quantity = parseInt(quantityInput.value, 10) || 1;
+
+      const tacoPrice = basePrice + toppingsCost + extraCost;
+      const total = tacoPrice * quantity;
+
+      document.getElementById("taco-total").textContent = "Total: $" + total.toFixed(2);
+    }
+
+    document.getElementById("calculate-btn").addEventListener("click", calculateTacoPrice);
+
+    function filterMenu(category) {
+      const categories = document.querySelectorAll(".menu-category");
+
+      categories.forEach(function (section) {
+        const sectionCategory = section.getAttribute("data-category");
+
+        if (sectionCategory === category) {
+          section.style.display = "";
+        } else {
+          section.style.display = "none";
+        }
+      });
+    }
+
+    const filterButtons = document.querySelectorAll("button[data-filter]");
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const category = button.getAttribute("data-filter");
+        filterMenu(category);
+      });
+    });
+  </script>
 </body>
 </html>
