@@ -18,51 +18,78 @@
 
   <section class="filter-controls">
     <h2>Filter Menu</h2>
+    <button type="button" data-filter="all">Show All</button>
     <button type="button" data-filter="tacos">Show Tacos</button>
     <button type="button" data-filter="burritos">Show Burritos</button>
     <button type="button" data-filter="drinks">Show Drinks</button>
   </section>
 
   <div class="menu-category" data-category="tacos">
-    <h2>Mains - Tacos</h2>
-    <ul>
-      <li>
-          <strong>Birria Tacos</strong><br>
-          Slow-braised beef folded into griddled corn tortillas, melted cheese, onions, cilantro, and served with a rich consomme for dipping.
-      </li>
-      <li>
-          <strong>Baja Crispy Fish Tacos</strong><br>
-          Beer-battered fish, cilantro-lime slaw, pico de gallo, and Baja crema on warm corn tortillas.
-      </li>
-      <li>
-          <strong>Carne Asada Tacos</strong><br>
-          Citrus-marinated grilled steak topped with chimichurri drizzle, onions, cilantro, and fresh lime.
-      </li>
-      <li>
-          <strong>Al Pastor Tacos</strong><br>
-          Marinated pork shaved from the trompo, topped with grilled pineapple, onions, and cilantro.
-      </li>
-      <li>
-          <strong>Chicken Tinga Tacos</strong><br>
-          Shredded chicken stewed in chipotle-tomato sauce, topped with chipotle crema and pickled onions.
-      </li>
-      <li>
-          <strong>Mushroom Asada (Vegan)</strong><br>
-          Charred portobello and oyster mushrooms with avocado salsa, radish, and cilantro.
-      </li>
-      <li>
-          <strong>Barbacoa Tacos</strong><br>
-          Tender slow-cooked beef with pickled red onions, cilantro, and a squeeze of lime.
-      </li>
-      <li>
-          <strong>Breakfast Tacos</strong><br>
-          Fluffy scrambled eggs, cheese, crispy potatoes, and your choice of bacon, chorizo, or veggies.
-      </li>
-    </ul>
+    <div class="taco-section">
+      <h2>Mains - Tacos</h2>
+      <ul>
+        <li>
+            <strong>Birria Tacos</strong> - $13.50 (3 tacos)<br>
+            Slow-braised beef folded into griddled corn tortillas, melted cheese, onions, cilantro, and served with a rich consomme for dipping.
+        </li>
+        <li>
+            <strong>Baja Crispy Fish Tacos</strong> - $12.75 (3 tacos)<br>
+            Beer-battered fish, cilantro-lime slaw, pico de gallo, and Baja crema on warm corn tortillas.
+        </li>
+        <li>
+            <strong>Carne Asada Tacos</strong> - $13.99 (3 tacos)<br>
+            Citrus-marinated grilled steak topped with chimichurri drizzle, onions, cilantro, and fresh lime.
+        </li>
+        <li>
+            <strong>Al Pastor Tacos</strong> - $12.75 (3 tacos)<br>
+            Marinated pork shaved from the trompo, topped with grilled pineapple, onions, and cilantro.
+        </li>
+        <li>
+            <strong>Chicken Tinga Tacos</strong> - $11.99 (3 tacos)<br>
+            Shredded chicken stewed in chipotle-tomato sauce, topped with chipotle crema and pickled onions.
+        </li>
+        <li>
+            <strong>Mushroom Asada (Vegan)</strong> - $11.99 (3 tacos)<br>
+            Charred portobello and oyster mushrooms with avocado salsa, radish, and cilantro.
+        </li>
+        <li>
+            <strong>Barbacoa Tacos</strong> - $13.99 (3 tacos)<br>
+            Tender slow-cooked beef with pickled red onions, cilantro, and a squeeze of lime.
+        </li>
+        <li>
+            <strong>Breakfast Tacos</strong> - $11.99 (3 tacos)<br>
+            Fluffy scrambled eggs, cheese, crispy potatoes, and your choice of bacon, chorizo, or veggies.
+        </li>
+      </ul>
 
-    <section>
+      <section>
     <h2>Build Your Own Tacos</h2>
     <p>Pick your protein, toppings, and extras to see your taco price.</p>
+    <p><em>Prices shown below are per taco; the menu above lists combos of 3 tacos.</em></p>
+
+    <h3>Protein Prices (per taco)</h3>
+    <ul>
+      <li>Birria - $4.50</li>
+      <li>Baja Crispy Fish - $4.25</li>
+      <li>Carne Asada - $4.75</li>
+      <li>Al Pastor - $4.25</li>
+      <li>Chicken Tinga - $4.00</li>
+      <li>Mushroom Asada (Vegan) - $4.00</li>
+      <li>Barbacoa - $4.75</li>
+      <li>Breakfast - $4.25</li>
+    </ul>
+
+    <h3>Topping &amp; Extra Prices</h3>
+    <p>First 2 toppings are free; additional toppings are charged as follows:</p>
+    <ul>
+      <li>Cheese - $0.50</li>
+      <li>Pico de Gallo - $0.50</li>
+      <li>Cilantro-Lime Slaw - $0.50</li>
+      <li>Baja / Chipotle Crema - $0.50</li>
+      <li>Avocado / Guacamole - $1.00</li>
+      <li>Grilled Pineapple - $0.75</li>
+      <li>Extra meat - $2.00</li>
+    </ul>
 
     <form id="taco-form">
       <fieldset>
@@ -103,86 +130,89 @@
     </form>
 
     <p id="taco-total">Total: $0.00</p>
-    </section>
+      </section>
+    </div>
 
-    <h2>Plates &amp; Specials</h2>
-    <ul>
-      <li>
-          <strong>Taco Plate</strong><br>
-          Choose any 3 tacos, served with rice and beans.
-      </li>
-      <li>
-          <strong>Quesabirria Plate</strong><br>
-          Crispy birria quesadilla with melted cheese, cilantro, onions, and consomme.
-      </li>
-      <li>
-          <strong>Carne Asada Bowl</strong><br>
-          Grilled steak over rice with black beans, roasted corn, pico de gallo, cilantro, and lime.
-      </li>
-      <li>
-          <strong>Veggie Bowl (Vegan)</strong><br>
-          Mushroom asada, charred peppers, corn, black beans, and avocado salsa over rice.
-      </li>
-    </ul>
+    <div class="other-menu-section">
+      <h2>Plates &amp; Specials</h2>
+      <ul>
+        <li>
+            <strong>Taco Plate</strong> - $15.99<br>
+            Choose any 3 tacos, served with rice and beans.
+        </li>
+        <li>
+            <strong>Quesabirria Plate</strong> - $16.49<br>
+            Crispy birria quesadilla with melted cheese, cilantro, onions, and consomme.
+        </li>
+        <li>
+            <strong>Carne Asada Bowl</strong> - $14.99<br>
+            Grilled steak over rice with black beans, roasted corn, pico de gallo, cilantro, and lime.
+        </li>
+        <li>
+            <strong>Veggie Bowl (Vegan)</strong> - $13.49<br>
+            Mushroom asada, charred peppers, corn, black beans, and avocado salsa over rice.
+        </li>
+      </ul>
 
-    <h2>Sides</h2>
-    <ul>
-      <li>
-          <strong>Esquites</strong><br>
-          Mexican street corn in a cup with mayo, queso fresco, lime, and chile seasoning.
-      </li>
-      <li>
-          <strong>Loaded Nachos</strong><br>
-          Tortilla chips topped with queso, pico, jalapenos, sour cream, and your choice of chicken or beef.
-      </li>
-      <li>
-          <strong>Quesabirria</strong><br>
-          Crispy cheese-filled birria taco served with consomme.
-      </li>
-      <li>
-          <strong>Fresh Guacamole Bowl</strong><br>
-          Made-to-order guacamole with cilantro, lime, and house tortilla chips.
-      </li>
-      <li>
-          <strong>Chips &amp; Salsa Trio</strong><br>
-          Roja, verde, and smoky chipotle salsa.
-      </li>
-      <li>
-          <strong>Rice &amp; Beans</strong><br>
-          Mexican red rice and slow-cooked black beans.
-      </li>
-    </ul>
+      <h2>Sides</h2>
+      <ul>
+        <li>
+            <strong>Esquites</strong> - $5.49<br>
+            Mexican street corn in a cup with mayo, queso fresco, lime, and chile seasoning.
+        </li>
+        <li>
+            <strong>Loaded Nachos</strong> - $11.99<br>
+            Tortilla chips topped with queso, pico, jalapenos, sour cream, and your choice of chicken or beef.
+        </li>
+        <li>
+            <strong>Quesabirria</strong> - $6.99<br>
+            Crispy cheese-filled birria taco served with consomme.
+        </li>
+        <li>
+            <strong>Fresh Guacamole Bowl</strong> - $8.49<br>
+            Made-to-order guacamole with cilantro, lime, and house tortilla chips.
+        </li>
+        <li>
+            <strong>Chips &amp; Salsa Trio</strong> - $6.49<br>
+            Roja, verde, and smoky chipotle salsa.
+        </li>
+        <li>
+            <strong>Rice &amp; Beans</strong> - $4.99<br>
+            Mexican red rice and slow-cooked black beans.
+        </li>
+      </ul>
 
-    <h2>Desserts</h2>
-    <ul>
-      <li>
-          <strong>Churros</strong><br>
-          Crispy cinnamon-sugar churros served with chocolate or caramel dipping sauce.
-      </li>
-      <li>
-          <strong>Tres Leches Cake</strong><br>
-          Moist three-milk cake topped with whipped cream and fresh berries.
-      </li>
-      <li>
-          <strong>Cinnamon Bunuelos</strong><br>
-          Crispy fried tortilla rounds with cinnamon sugar and honey drizzle.
-      </li>
-      <li>
-          <strong>Flan</strong><br>
-          Traditional caramel custard with vanilla.
-      </li>
-    </ul>
+      <h2>Desserts</h2>
+      <ul>
+        <li>
+            <strong>Churros</strong> - $6.49<br>
+            Crispy cinnamon-sugar churros served with chocolate or caramel dipping sauce.
+        </li>
+        <li>
+            <strong>Tres Leches Cake</strong> - $6.99<br>
+            Moist three-milk cake topped with whipped cream and fresh berries.
+        </li>
+        <li>
+            <strong>Cinnamon Bunuelos</strong> - $5.99<br>
+            Crispy fried tortilla rounds with cinnamon sugar and honey drizzle.
+        </li>
+        <li>
+            <strong>Flan</strong> - $5.99<br>
+            Traditional caramel custard with vanilla.
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="menu-category" data-category="burritos">
     <h2>Burritos</h2>
     <ul>
       <li>
-        <strong>Carne Asada Burrito</strong><br>
+        <strong>Carne Asada Burrito</strong> - $12.99<br>
         Grilled steak, rice, beans, cheese, pico de gallo, and salsa roja wrapped in a warm flour tortilla.
       </li>
       <li>
-        <strong>Veggie Burrito</strong><br>
+        <strong>Veggie Burrito</strong> - $11.49<br>
         Mushroom asada, black beans, rice, peppers, corn, and avocado salsa in a flour tortilla.
       </li>
     </ul>
@@ -193,33 +223,33 @@
 
     <h3>Agua Frescas</h3>
     <ul>
-        <li>Horchata</li>
-        <li>Jamaica (hibiscus)</li>
-        <li>Mango</li>
-        <li>Watermelon</li>
+        <li>Horchata - $3.50</li>
+        <li>Jamaica (hibiscus) - $3.50</li>
+        <li>Mango - $3.75</li>
+        <li>Watermelon - $3.75</li>
     </ul>
 
     <h3>Soft Drinks</h3>
     <ul>
-        <li>Coke</li>
-        <li>Diet Coke</li>
-        <li>Sprite</li>
-        <li>Jarritos (variety of flavors)</li>
-        <li>Bottled water</li>
+        <li>Coke - $2.75</li>
+        <li>Diet Coke - $2.75</li>
+        <li>Sprite - $2.75</li>
+        <li>Jarritos (variety of flavors) - $3.25</li>
+        <li>Bottled water - $2.25</li>
     </ul>
 
     <h3>Other Drinks</h3>
     <ul>
-        <li>Lemonades</li>
-        <li>Iced Tea</li>
+        <li>Lemonades - $3.25</li>
+        <li>Iced Tea - $2.95</li>
     </ul>
 
     <h3>Margaritas &amp; Cantina Drinks</h3>
     <ul>
-        <li>Classic Lime Margarita</li>
-        <li>Spicy Mango Margarita</li>
-        <li>Mezcal Paloma</li>
-        <li>Michelada</li>
+        <li>Classic Lime Margarita - $9.50</li>
+        <li>Spicy Mango Margarita - $10.50</li>
+        <li>Mezcal Paloma - $11.00</li>
+        <li>Michelada - $9.00</li>
     </ul>
   </div>
 
@@ -291,6 +321,21 @@
 
     function filterMenu(category) {
       const categories = document.querySelectorAll(".menu-category");
+      const tacoCategory = document.querySelector('.menu-category[data-category="tacos"]');
+
+      if (category === "all") {
+        categories.forEach(function (section) {
+          section.style.display = "";
+        });
+
+        if (tacoCategory) {
+          const tacoSection = tacoCategory.querySelector(".taco-section");
+          const otherMenuSection = tacoCategory.querySelector(".other-menu-section");
+          if (tacoSection) tacoSection.style.display = "";
+          if (otherMenuSection) otherMenuSection.style.display = "";
+        }
+        return;
+      }
 
       categories.forEach(function (section) {
         const sectionCategory = section.getAttribute("data-category");
@@ -301,6 +346,19 @@
           section.style.display = "none";
         }
       });
+
+      if (tacoCategory) {
+        const tacoSection = tacoCategory.querySelector(".taco-section");
+        const otherMenuSection = tacoCategory.querySelector(".other-menu-section");
+
+        if (category === "tacos") {
+          if (tacoSection) tacoSection.style.display = "";
+          if (otherMenuSection) otherMenuSection.style.display = "none";
+        } else {
+          if (tacoSection) tacoSection.style.display = "none";
+          if (otherMenuSection) otherMenuSection.style.display = "none";
+        }
+      }
     }
 
     const filterButtons = document.querySelectorAll("button[data-filter]");

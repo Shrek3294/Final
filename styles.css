@@ -59,6 +59,19 @@ section h2 {
   color: #b23a2c;
 }
 
+.menu-category section {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  display: block;
+}
+
+.filter-controls,
+.menu-category {
+  max-width: 960px;
+  margin: 0 auto 2rem auto;
+}
+
 .filter-controls {
   display: flex;
   align-items: center;

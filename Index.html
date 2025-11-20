@@ -20,7 +20,7 @@
     <section>
       <h2>Welcome to Barrio Tacos &amp; Cantina</h2>
       <p>
-        Barrio Tacos &amp; Cantina is your neighborhood spot for bold, modern Mexican flavors.
+        Barrio Tacos &amp; Cantina is your neighborhood spot for bold, modern, and affordable Mexican flavors.
         We specialize in street-style tacos with creative fillings, vibrant cocktails, and a lively cantina
         atmosphere that feels like a night out in the heart of Mexico City.
       </p>
@@ -71,6 +71,9 @@
         <button type="button" data-rating="5">&#9733;&#9733;&#9733;&#9733;&#9733;</button>
       </div>
       <p id="rating-message"></p>
+      <button type="button" id="contact-button" onclick="window.location.href='contact.html'" style="display: none;">
+        Contact Us
+      </button>
     </section>
   </main>
 
@@ -83,14 +86,26 @@
     function setupCustomerRatingStars() {
       const ratingContainer = document.getElementById("rating-stars");
       const ratingMessage = document.getElementById("rating-message");
+      const contactButton = document.getElementById("contact-button");
       if (!ratingContainer || !ratingMessage) return;
 
       ratingContainer.addEventListener("click", function (event) {
         const button = event.target.closest("button[data-rating]");
         if (!button) return;
 
-        const rating = button.getAttribute("data-rating");
-        ratingMessage.textContent = "Thank you for rating us " + rating + " out of 5 stars!";
+        const rating = parseInt(button.getAttribute("data-rating"), 10);
+
+        if (rating <= 3) {
+          ratingMessage.textContent = "We are sorry you didn't enjoy your tacos. Visit Contact Us to share what we could have done better. Thanks!";
+          if (contactButton) {
+            contactButton.style.display = "inline-block";
+          }
+        } else {
+          ratingMessage.textContent = "Thank you for rating us " + rating + " out of 5 stars!";
+          if (contactButton) {
+            contactButton.style.display = "none";
+          }
+        }
       });
     }
 
